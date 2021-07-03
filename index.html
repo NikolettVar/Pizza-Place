@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <title>Jamie's Pizza Place</title>
+</head>
+<body>
+    
+    <!--Page Title-->
+    <h1><i>Jamie's Pizza Place<sup>TM</sup></i></h1>
+
+    <!--Form for Username/Password fields-->
+    <form id="top" name="myForm" action="mailto:nikolettvaradi82@gmail.com" method="post" onsubmit="return checkInfo()">
+        <label for="username"> Username </label>
+        <input type="text" id="username" name="username" size="15" maxlength="15" autofocus title="Please enter your username" />
+        <label for="password"> Password </label>
+        <input type="password" id="password" name="password" size="7" maxlength="7" title="Please enter your password"/>
+        <input type="submit" value="Submit">
+    </form>
+
+
+    <!--Main content form in a table-->
+    <form id="pizzas" name="myPizzas">
+        <table>
+           <caption> Jamie's Pizza Selection</caption>
+            <tr>
+                <th> Pizza Size </th>
+                <th> Pizza amount </th>                
+                <th> Total </th>
+                <th> Discounted Total </th>
+            </tr>
+
+            <tr>
+                <td>
+                    <select id="list" title="Please choose the size of your pizza" onchange="getSelectedValue()"> <!--Dropdown for pizza sizes-->
+                        <option value="5"> Large &euro; 5 </option>
+                        <option value="7"> Extra-Large   &euro; 7 </option>
+                        <option value="17"> Supersize   &euro; 17 </option>
+                    </select>
+                </td>
+                <!--Input field for quantity, output fields for calculations-->
+                <td><input type="text" name="amount" size="5" maxlength="5" title="Please enter how many pizzas you need" onkeyup="validNumber()"/></td>
+                <td><div id="total"></div></td>
+                <td><div id="discounted"></div></td>
+               
+            </tr>
+
+            <!--Row for buttons and discount input-->
+            <tr>
+                <td><img src="pizza1.jpg" alt="Pizza" width="170" height="120" /></td>
+                <td><img src="pizza2.jpg" alt="Pizza" width="130" height="120" /></td>
+                <td><button type="button" onclick="calcTotal()"> Calculate Total </button></td>
+                <td>
+                    <label for="discountcode"> Discount Code: </label> <br />
+                    <input type="text" id="discountcode" name = "discountCode" placeholder="Please enter discount code" title="Please enter 'extracheese' to get a whopping 10% off!"/> <br />
+                    <button type="button" onclick="calcDiscountedTotal()"> Calculate Discounted Total </button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script src="main.js"></script>
+</body>
+</html>

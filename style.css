@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightgoldenrodyellow;
+  
+}
+
+h1{
+    text-align: center;
+    color: darkred;
+    font-size: 3em;
+}
+
+/*Styles for the username/password section */
+
+#top{
+    position: absolute;
+    left: 25%;
+    top: 20%;
+    width: 80%;
+    height: 25%;
+}
+
+#top label{
+    font-size:1.5em;
+    font-weight: bold;
+    font-style: italic;
+    color: darkred;
+}
+
+ #top input{    
+     font-size: 1.5em;
+     margin-right: 0.8em;
+     border-color: darkred;
+     color: darkred;
+     font-style: italic;
+ }
+
+ /*Styles for main form */
+
+ #pizzas{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    width: 80%;
+    height: 50%;
+ }
+
+ caption{
+    font-size:2em;
+    font-weight: bold;
+    font-style: italic;
+    color: darkred;
+    margin-bottom: 0.8em;
+ }
+ 
+ #pizzas table, th, td{
+    border: 1px solid darkred;
+    border-collapse: collapse;
+    font-size: 1.3em;
+    color: darkred;
+    font-style: italic;
+    padding: 0.8em;
+    text-align: center;
+ }
+
+ #pizzas input, select{
+     font-size: 0.8em;
+     border-color: darkred;
+ }
+
+
+ #pizzas button{
+     color:darkred;
+     font-size:0.6em;
+     font-weight: bold;
+     font-style: italic;
+     border: darkred solid 1px;
+     padding: 0.3em;
+     background-color:#ffb8b8;
+    }
+
+ #pizzas button:hover{
+     background-color: #ffcccc;
+     color: #333;
+ }
+
+
+
